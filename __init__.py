@@ -5,11 +5,12 @@ import time
 import os
 
 s = socket.socket()
-host = socket.gethostbyname("nuke-share.herokuapp.com")
+host = "0.0.0.0"
 port = os.environ.get('PORT')
+print(port)
 ThreadCount = 0
 try:
-    s.bind((host, port))
+    s.bind((host, int(port)))
 except socket.error as e:
     print(str(e))
 
