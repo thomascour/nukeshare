@@ -2,10 +2,11 @@ import socket
 import json
 import threading
 import time
+import os
 
 s = socket.socket()
-host = '0.0.0.0'
-port = 8080
+host = socket.gethostbyname("nuke-share.herokuapp.com")
+port = os.environ.get('PORT')
 ThreadCount = 0
 try:
     s.bind((host, port))
@@ -15,7 +16,7 @@ except socket.error as e:
 print('hello')
 print('Socket is listening..')
 s.listen(5)
-print(socket.gethostbyname(socket.gethostname()))
+print(socket.gethostname())
 
 
 clients = [] # The clients we have connected to
