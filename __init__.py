@@ -6,7 +6,7 @@ import os
 
 s = socket.socket()
 host = "0.0.0.0"
-port = os.environ.get('PORT')
+port = 8080
 print(port)
 ThreadCount = 0
 try:
