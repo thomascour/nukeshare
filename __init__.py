@@ -5,7 +5,7 @@ import time
 import os
 
 s = socket.socket()
-host = "0.0.0.0"
+host = socket.gethostbyname("nuke-share.herokuapp.com")
 port = 8080
 print(port)
 ThreadCount = 0
