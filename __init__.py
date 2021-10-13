@@ -17,7 +17,7 @@ except socket.error as e:
 print('hello')
 print('Socket is listening..')
 s.listen(5)
-print(socket.gethostname())
+print(socket.gethostbyname(socket.gethostname()))
 
 
 clients = [] # The clients we have connected to
