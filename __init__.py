@@ -4,14 +4,15 @@ import threading
 import time
 
 s = socket.socket()
-host = '192.168.1.18'
-port = 6969
+host = '0.0.0.0'
+port = 8080
 ThreadCount = 0
 try:
     s.bind((host, port))
 except socket.error as e:
     print(str(e))
 
+print('hello')
 print('Socket is listening..')
 s.listen(5)
 print(socket.gethostbyname(socket.gethostname()))
